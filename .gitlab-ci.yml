@@ -1,0 +1,11 @@
+stages:
+  - release
+
+production:
+  stage: release
+  only:
+    - main
+  tags:
+    - main
+  script:
+    - xcopy ..\uangmuka\ C:\xampp\htdocs\uangmuka /Y /E /H /C /I
